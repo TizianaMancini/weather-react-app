@@ -12,6 +12,7 @@ export default function Weather() {
               placeholder="Enter a city"
               className="form-control"
               autoComplete="off"
+              autoFocus="on"
             />
           </div>
           <div className="col-3">
@@ -37,20 +38,40 @@ export default function Weather() {
         <li>Snow</li>
       </ul>
 
-      <div className="row">
+      <div className="row weather-details">
         <div className="col-8">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/snow_light.png"
             alt="Light Snow"
           />
-          5ºC
+          <span className="temperature">5</span>
+          <span className="units">ºC</span>
         </div>
 
         <div className="col-4">
           <ul>
-            <li>Precipitation: 10%</li>
-            <li>Humidity: 5%</li>
-            <li>Wind: 5 km/h</li>
+            <li>
+              <strong>Precipitation:</strong> 10%
+            </li>
+            <li>
+              <strong>Humidity:</strong> 5%
+            </li>
+            <li>
+              <strong>Wind:</strong> 5 km/h
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-4">
+          <ul>
+            <li>
+              <strong>Snow</strong>
+            </li>
+            <li>
+              <strong>High:</strong> <strong>| Low:</strong>{" "}
+            </li>
           </ul>
         </div>
       </div>
