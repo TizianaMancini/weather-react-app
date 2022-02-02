@@ -27,6 +27,11 @@ export default function FormattedDate(props) {
   ];
 
   let day = days[props.date.getDay()];
+  let date = props.date.getDate();
+  let month = months[props.date.getMonth()];
+  let year = props.date.getFullYear();
+  let zone = "am";
+
   let hour = props.date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
@@ -37,9 +42,20 @@ export default function FormattedDate(props) {
     minutes = `0${minutes}`;
   }
 
+  if (hour > 12) {
+    zone = "pm";
+  } else {
+    zone = "am";
+  }
+
+  if (hour > 12) {
+    hour = hour - 12;
+  }
+
   return (
     <div>
-      {day} {hour}:{minutes}
+      {day}, {month} {date}, {year} at {hour}:{minutes}
+      {zone}
     </div>
   );
 }
