@@ -22,10 +22,24 @@ export default function WeatherTemperature(props) {
       <span className="WeatherTemperature">
         <span className="temperature">{Math.round(props.celsius)}</span>
         <span className="units">
-          ºC |{" "}
-          <a href="/" onClick={showFahrenheit}>
-            ºF
-          </a>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button
+              type="button"
+              class="btn btn-danger active"
+              id="celsius-link"
+            >
+              ºC
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="fahrenheit-link"
+              onClick={showFahrenheit}
+            >
+              ºF
+            </button>
+          </div>
         </span>
       </span>
     );
@@ -34,10 +48,24 @@ export default function WeatherTemperature(props) {
       <span className="WeatherTemperature">
         <span className="temperature">{Math.round(fahrenheit())}</span>
         <span className="units">
-          <a href="/" onClick={showCelsius}>
-            ºC
-          </a>
-          | ºF
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="celsius-link"
+              onClick={showCelsius}
+            >
+              ºC
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-danger active"
+              id="fahrenheit-link"
+            >
+              ºF
+            </button>
+          </div>
         </span>
       </span>
     );
