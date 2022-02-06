@@ -22,10 +22,10 @@ export default function WeatherTemperature(props) {
       <span className="WeatherTemperature">
         <span className="temperature">{Math.round(props.celsius)}</span>
         <span className="units">
-          <div class="btn-group" role="group" aria-label="Basic example">
+          <div className="btn-group" role="group" aria-label="Basic example">
             <button
               type="button"
-              class="btn btn-danger active"
+              className="btn btn-danger active"
               id="celsius-link"
             >
               ºC
@@ -33,7 +33,7 @@ export default function WeatherTemperature(props) {
 
             <button
               type="button"
-              class="btn btn-danger"
+              className="btn btn-danger"
               id="fahrenheit-link"
               onClick={showFahrenheit}
             >
@@ -48,10 +48,10 @@ export default function WeatherTemperature(props) {
       <span className="WeatherTemperature">
         <span className="temperature">{Math.round(fahrenheit())}</span>
         <span className="units">
-          <div class="btn-group" role="group" aria-label="Basic example">
+          <div className="btn-group" role="group" aria-label="Basic example">
             <button
               type="button"
-              class="btn btn-danger"
+              className="btn btn-danger"
               id="celsius-link"
               onClick={showCelsius}
             >
@@ -60,7 +60,7 @@ export default function WeatherTemperature(props) {
 
             <button
               type="button"
-              class="btn btn-danger active"
+              className="btn btn-danger active"
               id="fahrenheit-link"
             >
               ºF
