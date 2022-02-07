@@ -31,21 +31,6 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
       </div>
-
-      <div className="row">
-        <div className="col-4">
-          <ul>
-            <li>
-              <strong className="text-capitalize">
-                {props.data.description}
-              </strong>
-            </li>
-            <li>
-              <strong>High:</strong> <strong>| Low:</strong>{" "}
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
   );
 }
