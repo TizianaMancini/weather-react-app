@@ -1,3 +1,7 @@
+body {
+  background: coral;
+}
+
 .Weather {
   border: 3px solid black;
   border-radius: 10px;
@@ -55,4 +59,12 @@
   font-size: 16px;
   top: -34px;
   color: whitesmoke;
+}
+
+.Weather hr {
+  border: 2px solid whitesmoke;
+}
+
+.card-body {
+  background: #8497b8;
 }
