@@ -40,7 +40,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <form className="mb-3" onSubmit={handleSubmit}>
+        <form className="mb-8" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-6">
               <input
@@ -52,18 +52,11 @@ export default function Weather(props) {
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-3">
+            <div className="col-4">
               <input
                 type="submit"
                 value="Search"
                 className="btn btn-success w-100"
-              />
-            </div>
-            <div className="col-3">
-              <input
-                type="submit"
-                value="Current Location"
-                className="btn btn-warning w-100"
               />
             </div>
           </div>
